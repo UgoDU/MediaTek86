@@ -193,6 +193,7 @@ public class FrmModificationAbsence extends JFrame {
 		y2 = y2 + datefin.charAt(0) + datefin.charAt(1) + datefin.charAt(2) + datefin.charAt(3);
 		m2 = m2 + datefin.charAt(5) + datefin.charAt(6);
 		d2 = d2 + datefin.charAt(8) + datefin.charAt(9);
+		// contrôle si la date ne pose pas de problème au niveau du parsing
 		try {
 			int y3 = Integer.parseInt(y2) - Integer.parseInt(y1);
 			if (y3 == 0) {
@@ -255,6 +256,8 @@ public class FrmModificationAbsence extends JFrame {
 		comboBoxMotifAbsence.setBounds(146, 61, 156, 22);
 		contentPane.add(comboBoxMotifAbsence);
 		
+		// remplissage du ComboBox avec les noms des motifs
+		
 		ArrayList<String> ajoutNomsMotifs = controle.lireNomMotifs();
 		for (String unNomMotif : ajoutNomsMotifs){
 			comboBoxMotifAbsence.addItem(unNomMotif);
@@ -285,7 +288,7 @@ public class FrmModificationAbsence extends JFrame {
 				}
 			}
 		});
-		btnAjouterAbsence.setBounds(340, 11, 137, 64);
+		btnAjouterAbsence.setBounds(329, 11, 148, 64);
 		contentPane.add(btnAjouterAbsence);
 		
 		JButton btnQuitterPersonnel = new JButton("Annuler");
@@ -295,7 +298,7 @@ public class FrmModificationAbsence extends JFrame {
 				controle.changerFenetreAbsences(idpersonnel);
 			}
 		});
-		btnQuitterPersonnel.setBounds(340, 82, 137, 50);
+		btnQuitterPersonnel.setBounds(329, 82, 148, 50);
 		contentPane.add(btnQuitterPersonnel);
 		
 		JLabel lblInformation = new JLabel("Format: Ann\u00E9e-Mois-Jour");

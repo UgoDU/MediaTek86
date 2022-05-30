@@ -223,7 +223,7 @@ public class FrmModificationPersonnel extends JFrame {
 		contentPane.add(lblMailPersonnel);
 		
 		JLabel lblServicePersonnel = new JLabel("Service d'affectation");
-		lblServicePersonnel.setBounds(10, 111, 105, 14);
+		lblServicePersonnel.setBounds(10, 111, 126, 14);
 		contentPane.add(lblServicePersonnel);
 		
 		textFieldNomPersonnel = new JTextField();
@@ -250,6 +250,7 @@ public class FrmModificationPersonnel extends JFrame {
 		comboBoxServicePersonnel.setBounds(146, 107, 150, 22);
 		contentPane.add(comboBoxServicePersonnel);
 		
+		// remplissage du ComboBox avec les noms des services
 		
 		ArrayList<String> ajoutNomsServices = controle.lireNomServices();
 		for (String unNomService : ajoutNomsServices){
@@ -270,7 +271,7 @@ public class FrmModificationPersonnel extends JFrame {
 				}
 			}
 		});
-		btnAjouterPersonnel.setBounds(439, 11, 137, 64);
+		btnAjouterPersonnel.setBounds(426, 11, 150, 64);
 		contentPane.add(btnAjouterPersonnel);
 		
 		JButton btnQuitterPersonnel = new JButton("Annuler");
@@ -280,7 +281,7 @@ public class FrmModificationPersonnel extends JFrame {
 				controle.changerFenetreMain();
 			}
 		});
-		btnQuitterPersonnel.setBounds(439, 86, 137, 50);
+		btnQuitterPersonnel.setBounds(426, 86, 150, 50);
 		contentPane.add(btnQuitterPersonnel);
 		
 	}

@@ -67,6 +67,7 @@ public class FrmAbsences extends JFrame {
 		ArrayList<ArrayList<String>> listeAbsences = Controle.lireAbsencesRangesDESC(idpersonnel);
 		int taille1 = 0;
 		int taille2 = 0;
+		// création du tableau data dans le but de remplir la table
 		if (listeAbsences.isEmpty()) {
 			String[][] data = new String[1][5];
 			data[0][0] = "";
@@ -112,6 +113,8 @@ public class FrmAbsences extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		// initialisation des données nécessaires au remplissage de la table
 		
 		String[][] data = genererTable(idpersonnel);
 		String[] columns = {"idpersonnel","datedebut", "idmotif", "datefin", "nommotif"};
@@ -188,6 +191,8 @@ public class FrmAbsences extends JFrame {
 		});
 		btnRetour.setBounds(591, 330, 180, 32);
 		contentPane.add(btnRetour);
+		
+		// initialisation de la table et options
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(21, 11, 771, 309);

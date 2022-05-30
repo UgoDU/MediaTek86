@@ -71,6 +71,7 @@ public class FrmMain extends JFrame {
 		ArrayList<ArrayList<String>> listePersonnels = controle.lirePersonnelsRangesASC();
 		int taille1 = 0;
 		int taille2 = 0;
+		// création du tableau data dans le but de remplir la table
 		for (ArrayList<String> ligne : listePersonnels) {
 			taille1++;
 		}
@@ -107,6 +108,8 @@ public class FrmMain extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		// initialisation des données nécessaires au remplissage de la table
 		
 		String[][] data = genererTable();
 		String[] columns = {"idpersonnel","idservice", "prenom", "nom", "tel", "mail", "nomservice"};
@@ -214,6 +217,8 @@ public class FrmMain extends JFrame {
 		});
 		btnQuitterPersonnel.setBounds(961, 330, 225, 32);
 		contentPane.add(btnQuitterPersonnel);
+		
+		// initialisation de la table et options
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setAutoscrolls(true);

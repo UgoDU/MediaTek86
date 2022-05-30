@@ -102,7 +102,7 @@ public class FrmAjoutPersonnel extends JFrame {
 		contentPane.add(lblMailPersonnel);
 		
 		JLabel lblServicePersonnel = new JLabel("Service d'affectation");
-		lblServicePersonnel.setBounds(10, 111, 105, 14);
+		lblServicePersonnel.setBounds(10, 111, 126, 14);
 		contentPane.add(lblServicePersonnel);
 		
 		textFieldNomPersonnel = new JTextField();
@@ -129,6 +129,7 @@ public class FrmAjoutPersonnel extends JFrame {
 		comboBoxServicePersonnel.setBounds(146, 107, 150, 22);
 		contentPane.add(comboBoxServicePersonnel);
 		
+		// remplissage du ComboBox avec les noms des services
 		
 		ArrayList<String> ajoutNomsServices = controle.lireNomServices();
 		for (String unNomService : ajoutNomsServices){

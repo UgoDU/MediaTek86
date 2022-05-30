@@ -111,6 +111,7 @@ public class FrmAjoutAbsence extends JFrame {
 		y2 = y2 + datefin.charAt(0) + datefin.charAt(1) + datefin.charAt(2) + datefin.charAt(3);
 		m2 = m2 + datefin.charAt(5) + datefin.charAt(6);
 		d2 = d2 + datefin.charAt(8) + datefin.charAt(9);
+		// contrôle si la date ne pose pas de problème au niveau du parsing
 		try {
 			int y3 = Integer.parseInt(y2) - Integer.parseInt(y1);
 			if (y3 == 0) {
@@ -190,6 +191,8 @@ public class FrmAjoutAbsence extends JFrame {
 		JComboBox comboBoxMotifAbsence = new JComboBox();
 		comboBoxMotifAbsence.setBounds(146, 61, 156, 22);
 		contentPane.add(comboBoxMotifAbsence);
+		
+		// remplissage du ComboBox avec les noms des motifs
 		
 		ArrayList<String> ajoutNomsMotifs = controle.lireNomMotifs();
 		for (String unNomMotif : ajoutNomsMotifs){
