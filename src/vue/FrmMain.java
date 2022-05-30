@@ -80,9 +80,6 @@ public class FrmMain extends JFrame {
 				taille2++;
 			}
 		}
-		System.out.println("TAILLES PR");
-		System.out.println(taille1);
-		System.out.println(taille2);
 		String[][] data = new String[taille2][taille1*taille2];
 		int j = 0;
 		for (ArrayList<String> ligne : listePersonnels) {
@@ -143,7 +140,6 @@ public class FrmMain extends JFrame {
 							String recup_prenom = data[tableDonnees.getSelectedRow()][3];
 							String recup_tel = data[tableDonnees.getSelectedRow()][4];
 							String recup_mail = data[tableDonnees.getSelectedRow()][5];
-							System.out.println(recup_nom);
 							controle.supprimerDeLaBasePersonnels(recup_idpersonnel, recup_idservice, recup_nom, recup_prenom, recup_tel, recup_mail);
 							dispose();
 							controle.changerFenetreMain();

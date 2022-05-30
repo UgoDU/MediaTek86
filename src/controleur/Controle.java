@@ -98,7 +98,6 @@ public class Controle {
 			listePersonnels.add(ligne);
 		}
 		
-		System.out.println(listePersonnels.size());
 		return listePersonnels;
 	}
 	
@@ -135,7 +134,6 @@ public class Controle {
 			listeAbsences.add(ligne);
 		}
 		
-		System.out.println(listeAbsences.size());
 		return listeAbsences;
 	}
 	

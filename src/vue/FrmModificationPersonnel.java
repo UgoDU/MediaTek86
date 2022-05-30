@@ -264,7 +264,6 @@ public class FrmModificationPersonnel extends JFrame {
 					JOptionPane.showMessageDialog(null, "Erreur: tous les champs doivent être remplis.", "Erreur", JOptionPane.ERROR_MESSAGE);
 				} else {
 					JOptionPane.showMessageDialog(null, "Le personnel a correctement été modifié.", "Succès", JOptionPane.INFORMATION_MESSAGE);
-					System.out.println(Integer.toString(comboBoxServicePersonnel.getSelectedIndex() + 1) + textFieldNomPersonnel.getText() + textFieldPrenomPersonnel.getText() + textFieldTelephonePersonnel.getText() + textFieldMailPersonnel.getText());
 					controle.modifierEnBasePersonnel(s_idpersonnel, s_idservice, s_nom, s_prenom, s_tel, s_mail, Integer.toString(comboBoxServicePersonnel.getSelectedIndex() + 1), textFieldNomPersonnel.getText(), textFieldPrenomPersonnel.getText(), textFieldTelephonePersonnel.getText(), textFieldMailPersonnel.getText());
 					dispose();
 					controle.changerFenetreMain();

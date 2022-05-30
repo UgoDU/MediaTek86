@@ -266,7 +266,6 @@ public abstract class AccesDonnees {
 			lesAbsences.add(uneAbsence);
 		}
 		cn.close();
-		System.out.println(lesAbsences.size());
 		return lesAbsences;
 	}
 	
